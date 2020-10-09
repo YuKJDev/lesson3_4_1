@@ -12,7 +12,7 @@ public class WiteNotifyABC {
                     while (outLetter != 'A') {
                         mon.wait();
                     }
-                    System.out.print("A");
+                    System.out.print(outLetter);
                     outLetter = 'B';
                     mon.notifyAll();
                 }
@@ -29,7 +29,7 @@ public class WiteNotifyABC {
                     while (outLetter != 'B') {
                         mon.wait();
                     }
-                    System.out.print("B");
+                    System.out.print(outLetter);
                     outLetter = 'C';
                     mon.notifyAll();
                 }
@@ -46,7 +46,7 @@ public class WiteNotifyABC {
                     while (outLetter != 'C') {
                         mon.wait();
                     }
-                    System.out.print("C");
+                    System.out.print(outLetter);
                     outLetter = 'A';
                     mon.notifyAll();
                 }
