@@ -3,16 +3,7 @@ public class WiteNotifyABC {
     private final Object mon = new Object();
     private  volatile char outLetter = 'A';
 
-    public static  void main(String[] args) {
-        WiteNotifyABC witeNotifyABC = new WiteNotifyABC();
-        Thread thA = new Thread(witeNotifyABC::printedA);
-        Thread thB = new Thread(witeNotifyABC::printedB);
-        Thread thC = new Thread(witeNotifyABC::printedC);
-            thA.start();
-            thB.start();
-            thC.start();
 
-    }
 
     public void printedA() {
         synchronized (mon) {
