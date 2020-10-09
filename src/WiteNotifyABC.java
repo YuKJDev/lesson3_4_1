@@ -5,7 +5,7 @@ public class WiteNotifyABC {
 
 
 
-    public void printedA() {
+    public synchronized void printedA() {
         synchronized (mon) {
             try {
                 for (int i = 0; i < 5; i++) {
